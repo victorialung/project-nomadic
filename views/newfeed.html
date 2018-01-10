@@ -12,38 +12,51 @@
   <link rel="stylesheet" href="../vendors/foundation/css/app.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<!-- start newsfeed section -->
 
-<body class="bg-image">
-  <div class="row vh-40 ">
-    <div class="small-12 columns padding-top-4">
-      <img src="../assets/img/nomadic-logo.png" alt="logo">
+<body class="">
+  <!-- start newsfeed section -->
+  <div class="row">
+    <div class="small-12 columns">
+
     </div>
-  </div>
-  <div class="row vh-60 ">
-    <div class="small-12 columns padding-top-5">
-      <div class="login padding-4 " id="login">
-        <div class="box-login padding-4">
-          <p class="text-justify ft-whitesmoke ">
-            <strong>Log in with you Gmail account </strong>
-          </p>
+    <div class="mobile-nav-bar title-bar">
+      <div class="title-bar-left">
+        <button class="menu-icon" type="button"></button>
+      </div>
+      <div class="title-bar-center">
+        <span class="title-bar-text">My Page</span>
+      </div>
+      <div class="title-bar-right">
+        <span class="title-bar-text">Actions</span>
+        <span class="title-bar-text">
+          <a href="#">
+            <i class="fa fa-home title-bar-logo"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="small-12 columns">
+      <div class="uploader padding-4 " id="uploader">
+        <h3>Share your experience </h3>
+        <div class="preview thumbnail" id="preview">
+          <a href="#" class="button round" id="file-select">Choose Files</a>
+          <img src="" alt="">
         </div>
-        <div class="box-login padding-4 padding-side-4 ">
-          <button type="button " class="alert button text-center text-justify" id="star-login ">Iniciar sesion con
-            <i class="fa fa-google
-          fa-2x " aria-hidden="true "></i>
-          </button>
-        </div>
+        <span id="file-info">No files have been uploaded yet</span>
+        <input type="file" name="file" id="file">
+        <a href="#" id="file-save">Save file</a>
+
       </div>
     </div>
   </div>
-  <!-- End primary section -->
+
+  <!-- End newsfeed section -->
   <script src="../vendors/js/jquery-3.2.1.min.js "></script>
   <script src="../vendors/foundation/js/vendor/jquery.js "></script>
   <script src="../vendors/foundation/js/vendor/what-input.js "></script>
   <script src="../vendors/foundation/js/vendor/foundation.js "></script>
   <script src="../vendors/foundation/js/app.js "></script>
-  <script src="../js/primary.js "></script>
+  <script src="../js/newsfeed.js "></script>
 </body>
 
 </html>
