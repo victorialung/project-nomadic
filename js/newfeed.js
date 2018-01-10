@@ -1,41 +1,42 @@
-$('preview').hover(function () {
-  $(this).find('a').fadeIn();
-}, function () {
-  $(this).find('a').fadeOut();
-}
+// Función para poder subir imagen-dinamico
+// $('preview').hover(function () {
+//   $(this).find('a').fadeIn();
+// }, function () {
+//   $(this).find('a').fadeOut();
+// }
 
-);
+// );
 
-$('#file-select').on('click', function (e) {
-  e.preventDefault();
+// $('#file-select').on('click', function (e) {
+//   e.preventDefault();
 
-  $('#file').click();
-});
+//   $('#file').click();
+// });
 
-$('input[type=file]').change(function () {
-  var file = (this.files[0].name).toString();
-  var reader = new FileReader();
-  $('#file-info').text('');
-  $('file-info').text(file);
+// $('input[type=file]').change(function () {
+//   var file = (this.files[0].name).toString();
+//   var reader = new FileReader();
+//   $('#file-info').text('');
+//   $('file-info').text(file);
 
-  reader.onload = funtion(e){
-    $('#preview img').attr('src', e.target.result);
-  };
+//   reader.onload = funtion(e){
+//     $('#preview img').attr('src', e.target.result);
+//   };
 
-  reader.readerDataURL(this.files[0]);
-});
+//   reader.readerDataURL(this.files[0]);
+// });
 
 
-window.addEventListener('load', function (event) {
+window.addEventListener('load', function(event) {
   var post = document.getElementById('post');
   var btnSave = document.getElementById('btnSave');
 
 
-  post.addEventListener('input', function (event) {
+  post.addEventListener('input', function(event) {
     console.log(event.target.value); // -- obtengo el valor textual de mi target
   });
 
-  btnSave.addEventListener('click', function (event) {
+  btnSave.addEventListener('click', function(event) {
     event.preventDefault();
     var postValue = post.value;
     // console.log(nameValue);
