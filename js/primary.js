@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   var $loginBtn = $('#star-login');
 
-  // eventos
+  // eventos firebase
   $loginBtn.on('click', googleLogin);
   // $(window).on('unload', signOut); // cuando cierra la ventana se desloguea
 
@@ -62,5 +62,12 @@ $(document).ready(function() {
 
   function signOut() {
     database.ref('/connected/' + conectadoKey).remove();
+  }
+
+  // Eventos para redireccionar a la vista newsfeed
+
+  function redirect() {
+    setTimeout(redirect, 3000);
+    $(location).attr('href', 'views/newsfeed.html');
   }
 });

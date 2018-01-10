@@ -1,9 +1,9 @@
-// function begin() {
-//   setTimeout(redirect, 3000);
-// }
+function begin() {
+  setTimeout(redirect, 3000);
+}
 
-// function redirect() {
-//   $(location).attr('href', 'views/primary.html');
-// }
+function redirect() {
+  $(location).attr('href', 'views/primary.html');
+}
 
-// $(document).ready(begin);
+$(document).ready(begin);

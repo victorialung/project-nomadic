@@ -16,12 +16,18 @@ body {
   background-color: #dfdfdf;
 }
 
+.bg-image {
+  background-image: url(../assets/img/primary.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .ft-grey {
   color: #857069;
 }
 
-.ft-red{
-  color: #e04c40;
+.ft-whitesmoke {
+  color: whitesmoke;
 }
 
 .vh-20 {
@@ -56,14 +62,26 @@ body {
   line-height: 100vh;
 }
 
-.padding-4{
+.padding-4 {
   padding: 1rem;
 }
 
-.padding-top-4{
+.padding-side-4 {
+  padding: 0 2.7rem;
+}
+
+.padding-top-4 {
   padding-top: 1em;
 }
 
-.padding-top-5{
+.padding-top-5 {
   padding-top: 1.5em;
 }
+
+.mobile-nav-bar a {
+  color: #fefefe;
+}
+
+/* .thumbnail{
+  width: 300px;;
+} */

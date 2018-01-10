@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nomadic</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../vendors/foundation/css/foundation.css">
+  <link rel="stylesheet" href="../vendors/foundation/css/app.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="">
+  <!-- start newsfeed section -->
+  <div class="row">
+
+    <div class="bg-gradient title-bar">
+      <div class="title-bar-left">
+        <a href="#">
+          <i class="fa fa-user-circle-o fa-2x ft-whitesmoke" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="title-bar-center">
+        <a href="#">
+          <img src="../assets/img/nomadic logo-02 1.png" width="50" height="50" alt="logo">
+        </a>
+      </div>
+      <div class="title-bar-right">
+        <span class="title-bar-text">
+          <a href="" class="ft-whitesmoke">Log Out</a>
+        </span>
+      </div>
+    </div>
+    <div class="small-12 columns">
+      <div class="uploader padding-4 text-center ft-grey" id="uploader">
+        <h3>Share your experience </h3>
+        <div class="preview thumbnail padding-4" id="preview">
+          <a href="#" class="button round " id="file-select">Choose Files</a>
+        </div>
+        <input type="file" name="file" id="file">
+        <a href="#" id="file-save" class="button round">Save file</a>
+      </div>
+    </div>
+    <div class="small-12 columns">
+      <div class="padding-4 text-center ft-grey">
+        <h3>Post</h3>
+        <form>
+          <div class="input-wrapper">
+            <label for="post">Leave a post </label>
+            <input type="text" name="post" id="post" placeholder="How was your day?">
+          </div>
+          <button id="btnSave" class="btn">Send Post</button>
+        </form>
+        <div>
+          <h3>My Post</h3>
+          <ul id="container-post">
+            <!-- <li> Name <br> cellphone </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End newsfeed section -->
+  <script src="../vendors/js/jquery-3.2.1.min.js "></script>
+  <script src="../vendors/foundation/js/vendor/jquery.js "></script>
+  <script src="../vendors/foundation/js/vendor/what-input.js "></script>
+  <script src="../vendors/foundation/js/vendor/foundation.js "></script>
+  <script src="../vendors/foundation/js/app.js "></script>
+  <script src="../js/newsfeed.js "></script>
+</body>
+
+</html>
