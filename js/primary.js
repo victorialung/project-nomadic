@@ -19,9 +19,9 @@ $(document).ready(function() {
 
   var $loginBtn = $('#star-login');
 
-  // eventos firebase
+  // eventos
   $loginBtn.on('click', googleLogin);
-  //$(window).on('unload', signOut); // cuando cierra la ventana se desloguea
+  // $(window).on('unload', signOut); // cuando cierra la ventana se desloguea
 
   function googleLogin() {
     var provider = new firebase.auth.GoogleAuthProvider();
@@ -29,7 +29,7 @@ $(document).ready(function() {
     firebase
       .auth()
       .signInWithPopup(provider)
-      .then(function (result) {
+      .then(function(result) {
         // guarda usuario que da result
         user = result.user;
         // muestra contenido
@@ -63,12 +63,4 @@ $(document).ready(function() {
   function signOut() {
     database.ref('/connected/' + conectadoKey).remove();
   }
-
-  // Eventos para redireccionar a la vista newsfeed
-
-  function redirect() {
-    setTimeout(redirect, 3000);
-    $(location).attr('href', 'views/newsfeed.html');
-  }
-
 });
