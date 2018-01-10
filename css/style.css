@@ -77,3 +77,11 @@ body {
 .padding-top-5 {
   padding-top: 1.5em;
 }
+
+.mobile-nav-bar a {
+  color: #fefefe;
+}
+
+/* .thumbnail{
+  width: 300px;;
+} */

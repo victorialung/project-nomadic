@@ -16,36 +16,50 @@
 <body class="">
   <!-- start newsfeed section -->
   <div class="row">
-    <div class="small-12 columns">
 
-    </div>
-    <div class="mobile-nav-bar title-bar">
+    <div class="bg-gradient title-bar">
       <div class="title-bar-left">
-        <button class="menu-icon" type="button"></button>
+        <a href="#">
+          <i class="fa fa-user-circle-o fa-2x ft-whitesmoke" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="title-bar-center">
-        <span class="title-bar-text">My Page</span>
+        <a href="#">
+          <img src="../assets/img/nomadic logo-02 1.png" width="50" height="50" alt="logo">
+        </a>
       </div>
       <div class="title-bar-right">
-        <span class="title-bar-text">Actions</span>
         <span class="title-bar-text">
-          <a href="#">
-            <i class="fa fa-home title-bar-logo"></i>
-          </a>
+          <a href="" class="ft-whitesmoke">Log Out</a>
         </span>
       </div>
     </div>
     <div class="small-12 columns">
-      <div class="uploader padding-4 " id="uploader">
+      <div class="uploader padding-4 text-center ft-grey" id="uploader">
         <h3>Share your experience </h3>
-        <div class="preview thumbnail" id="preview">
-          <a href="#" class="button round" id="file-select">Choose Files</a>
-          <img src="" alt="">
+        <div class="preview thumbnail padding-4" id="preview">
+          <a href="#" class="button round " id="file-select">Choose Files</a>
         </div>
-        <span id="file-info">No files have been uploaded yet</span>
         <input type="file" name="file" id="file">
-        <a href="#" id="file-save">Save file</a>
-
+        <a href="#" id="file-save" class="button round">Save file</a>
+      </div>
+    </div>
+    <div class="small-12 columns">
+      <div class="padding-4 text-center ft-grey">
+        <h3>Post</h3>
+        <form>
+          <div class="input-wrapper">
+            <label for="post">Leave a post </label>
+            <input type="text" name="post" id="post" placeholder="How was your day?">
+          </div>
+          <button id="save" class="btn">Guardar</button>
+        </form>
+        <div>
+          <h3>My Post</h3>
+          <ul id="container-contact">
+            <!-- <li> Name <br> cellphone </li> -->
+          </ul>
+        </div>
       </div>
     </div>
   </div>
