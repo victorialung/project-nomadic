@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom, rgba(183, 29, 70, 1) 0%, rgba(143, 2, 34, 1) 56%, rgba(169, 3, 41, 1) 100%);
+}
+
+.bg-grey {
+  background-color: #dfdfdf;
+}
+
+.ft-grey {
+  color: #857069;
+}
+
+.ft-red{
+  color: #e04c40;
+}
+
+.vh-20 {
+  height: 20vh;
+}
+
+.vh-30 {
+  height: 30vh;
+}
+
+.vh-33 {
+  height: 33vh;
+}
+
+.vh-40 {
+  height: 40vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.vh-60 {
+  height: 60vh;
+}
+
+.vh-height {
+  height: 100vh;
+}
+
+.ln-height {
+  line-height: 100vh;
+}
+
+.padding-4{
+  padding: 1rem;
+}
+
+.padding-top-4{
+  padding-top: 1em;
+}
+
+.padding-top-5{
+  padding-top: 1.5em;
+}
