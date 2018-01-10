@@ -81,12 +81,10 @@ body {
 .mobile-nav-bar a {
   color: #fefefe;
 }
-
-/* .thumbnail{
-  width: 300px;;
-} */
-
 /* profile style*/
+.round{
+  border-radius: 8px;
+}
 .card-profile-stats {
   margin: 0 0 1.25rem;
   padding: 1.25rem;
