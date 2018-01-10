@@ -1,15 +1,15 @@
 // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAHj80B6BW0qgmAuIRa65CKZaJrKlutQW8",
-    authDomain: "project-nomadic.firebaseapp.com",
-    databaseURL: "https://project-nomadic.firebaseio.com",
-    projectId: "project-nomadic",
-    storageBucket: "project-nomadic.appspot.com",
-    messagingSenderId: "570392010848"
-  };
-  firebase.initializeApp(config);
+var config = {
+  apiKey: 'AIzaSyAHj80B6BW0qgmAuIRa65CKZaJrKlutQW8',
+  authDomain: 'project-nomadic.firebaseapp.com',
+  databaseURL: 'https://project-nomadic.firebaseio.com',
+  projectId: 'project-nomadic',
+  storageBucket: 'project-nomadic.appspot.com',
+  messagingSenderId: '570392010848'
+};
+firebase.initializeApp(config);
 /* Inicialize jquery */
-$(document).ready(function(){
+$(document).ready(function() {
   var user = null;
   var usuariosConectados = null;
   // conexion con la base de datos
@@ -20,10 +20,10 @@ $(document).ready(function(){
   var $loginBtn = $('#star-login');
 
   // eventos
-  $loginBtn.on('click',googleLogin);
-  //$(window).on('unload', signOut); // cuando cierra la ventana se desloguea
+  $loginBtn.on('click', googleLogin);
+  // $(window).on('unload', signOut); // cuando cierra la ventana se desloguea
 
-  function googleLogin () {
+  function googleLogin() {
     var provider = new firebase.auth.GoogleAuthProvider();
 
     firebase
