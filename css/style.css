@@ -81,34 +81,57 @@ body {
 .mobile-nav-bar a {
   color: #fefefe;
 }
-/* profile style*/
-.round{
-  border-radius: 8px;
+
+.round {
+  border-radius: 5px;
 }
+
+
+/* logout style */
+
+.logout-container {
+  position: relative;
+}
+
+.log-out {
+  position: absolute;
+  left: 37%;
+  bottom: 20%;
+}
+
+
+/* profile style*/
+
 .card-profile-stats {
   margin: 0 0 1.25rem;
   padding: 1.25rem;
   background: #fff;
 }
+
 .card-profile-stats-intro {
   text-align: center;
 }
+
 .card-profile-stats-intro-pic {
   border-radius: 50%;
   margin: 0 0 1.25rem;
 }
+
 p:last-child {
   margin: 0;
 }
+
 .card-profile-stats-container {
   display: flex;
   justify-content: center;
   margin-left: 1.5rem;
   text-align: center;
 }
+
 .card-profile-stats-statistic {
   padding-right: 2rem;
 }
+
 .card-profile-stats-more-link {
   margin: 0;
   text-align: center;
@@ -116,6 +139,7 @@ p:last-child {
   padding: 0.5rem;
   cursor: pointer;
 }
+
 .card-profile-stats-more-content {
   display: none;
 }
