@@ -82,6 +82,11 @@ body {
   color: #fefefe;
 }
 
-/* .thumbnail{
-  width: 300px;;
-} */
+.round{
+  border-radius: 8px;
+}
+
+.file-select{
+  display:none;
+}
+

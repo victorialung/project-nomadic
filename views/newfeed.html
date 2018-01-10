@@ -16,15 +16,14 @@
 <body class="">
   <!-- start newsfeed section -->
   <div class="row">
-
     <div class="bg-gradient title-bar">
       <div class="title-bar-left">
-        <a href="#">
+        <a href="profile.html">
           <i class="fa fa-user-circle-o fa-2x ft-whitesmoke" aria-hidden="true"></i>
         </a>
       </div>
       <div class="title-bar-center">
-        <a href="#">
+        <a href="profile.html">
           <img src="../assets/img/nomadic logo-02 1.png" width="50" height="50" alt="logo">
         </a>
       </div>
@@ -38,26 +37,26 @@
       <div class="uploader padding-4 text-center ft-grey" id="uploader">
         <h3>Share your experience </h3>
         <div class="preview thumbnail padding-4" id="preview">
-          <a href="#" class="button round " id="file-select">Choose Files</a>
+          <a href="#" class="file-select" id="fileSelect">Choose Files</a>
         </div>
         <input type="file" name="file" id="file">
         <a href="#" id="file-save" class="button round">Save file</a>
+        <hr>
       </div>
     </div>
     <div class="small-12 columns">
-      <div class="padding-4 text-center ft-grey">
-        <h3>Post</h3>
+      <div class="text-center ft-grey padding-4">
         <form>
           <div class="input-wrapper">
             <label for="post">Leave a post </label>
             <input type="text" name="post" id="post" placeholder="How was your day?">
           </div>
-          <button id="btnSave" class="btn">Send Post</button>
+          <button id="btnSave" class="button round">Send Post</button>
         </form>
         <div>
-          <h3>My Post</h3>
-          <ul id="container-post">
-            <!-- <li> Name <br> cellphone </li> -->
+          <hr>
+          <ul class="container-post no-bullet ft-grey" id="container-post">
+            <!-- <li>post </li> -->
           </ul>
         </div>
       </div>
@@ -70,7 +69,7 @@
   <script src="../vendors/foundation/js/vendor/what-input.js "></script>
   <script src="../vendors/foundation/js/vendor/foundation.js "></script>
   <script src="../vendors/foundation/js/app.js "></script>
-  <script src="../js/newsfeed.js "></script>
+  <script src="../js/newfeed.js "></script>
 </body>
 
 </html>
