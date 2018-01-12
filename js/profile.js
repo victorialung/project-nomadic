@@ -1,4 +1,4 @@
-// more click
+
 $('.card-profile-stats-more-link').click(function(event) {
   event.preventDefault();
   if ($('.card-profile-stats-more-content').is(':hidden')) {

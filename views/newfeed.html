@@ -35,42 +35,33 @@
       </div>
     </div>
     <div class="small-12 columns">
-      <div class="uploader padding-4 text-center ft-grey" id="uploader">
-        <h3>Share your experience </h3>
-        <div class="preview thumbnail padding-4" id="preview">
-          <a href="#" class="file-select" id="fileSelect">Choose Files</a>
-        </div>
-        <input type="file" name="file" id="file">
-        <a href="#" id="file-save" class="button round">Save file</a>
-        <hr>
-      </div>
-    </div>
-    <div class="small-12 columns">
-      <div class="text-center ft-grey padding-4">
-        <form>
-          <div class="input-wrapper">
-            <h3 class="ft-grey">Leave a post </h3>
-            <input type="text" name="post" id="post" placeholder="How was your day?">
+      <div class="uploader padding-4  ft-grey tab-content text-center">
+        <div class="card thumbnail padding-4">
+          <div class="body ">
+            <div class="text">
+              <textarea id="post" name="post" placeholder="What's on your mind?"></textarea>
+              <button class="button round" id="btnSave">Post</button>
+              <input id="photo" type="file" />
+            </div>
           </div>
-          <button id="btnSave" class="button round">Send Post</button>
-        </form>
-        <div>
-          <hr>
-          <ul class="container-post no-bullet ft-grey" id="container-post">
-            <!-- <li>post </li> -->
-          </ul>
+          <div>
+            <hr>
+            <ul class="container-post no-bullet ft-grey" id="container-post">
+              <!-- agregando imgs-->
+              <img id="i" />
+            </ul>
+          </div>
         </div>
+
       </div>
     </div>
-  </div>
-
-  <!-- End newsfeed section -->
-  <script src="../vendors/js/jquery-3.2.1.min.js "></script>
-  <script src="../vendors/foundation/js/vendor/jquery.js "></script>
-  <script src="../vendors/foundation/js/vendor/what-input.js "></script>
-  <script src="../vendors/foundation/js/vendor/foundation.js "></script>
-  <script src="../vendors/foundation/js/app.js "></script>
-  <script src="../js/newfeed.js "></script>
+    <!-- End newsfeed section -->
+    <script src="../vendors/js/jquery-3.2.1.min.js "></script>
+    <script src="../vendors/foundation/js/vendor/jquery.js "></script>
+    <script src="../vendors/foundation/js/vendor/what-input.js "></script>
+    <script src="../vendors/foundation/js/vendor/foundation.js "></script>
+    <script src="../vendors/foundation/js/app.js "></script>
+    <script src="../js/newfeed.js "></script>
 </body>
 
 </html>
