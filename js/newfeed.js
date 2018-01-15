@@ -43,14 +43,16 @@ window.addEventListener('load', function() {
 
     // creando un JSON = JavaScript Object Notation - lo usamos para guardarlo en el localStorage
 
-    var newsFeed = { 'id': idDateReference,
-'date': date,
-'texto': text };
+    var newsFeed = {
+      'id': idDateReference,
+      'date': date,
+      'texto': text,
+    };
     validateNewsFeed(newsFeed);
   }
 
   function validPost(dataNewsFeed) {
-    if (dataNewsFeed == null || dataNewsFeed == '' || typeof dataNewsFeed === 'undefined' || dataNewsFeed == 'undefined') {
+    if (dataNewsFeed === null || dataNewsFeed === '' || typeof dataNewsFeed === 'undefined' || dataNewsFeed === 'undefined') {
       return false;
     } else {
       return true;
@@ -102,19 +104,16 @@ window.addEventListener('load', function() {
 
   function erasePost(newsFeed) {
     var eraseContentPost = '';
-    eraseContentPost += '<div class="newsfeedPost" id=" ' + newsFeed.idDateReference + '">';
-    eraseContentPost += '<div class="row">';
-    eraseContentPost += '<div class="col-md-6 text-left">';
-    eraseContentPost += '<small><i class="fa fa-calendar-o"aria-hidden="true"></i> ' + newsFeed.date + '</small>';
-    eraseContentPost += '</div>';
-    eraseContentPost += '<div class="col-md-6 text-right">';
-    eraseContentPost += '<small><i class="fa fa-window-close"aria-hidden="true"></i></small>';
+    eraseContentPost += '<div class="newsfeedPost rounded bg-whitesmoke" id=" ' + newsFeed.idDateReference + '">';
+    eraseContentPost += '<div class="row p-2 ">';
+    eraseContentPost += '<div class="col-sm-8 col-md-8 text-left ">';
+    eraseContentPost += '<span class="ft-grey text-center feedback" id="username"> Micaela Bastidas</span>' + ' ' + ' ' + '<small class="feedback-icon"><i class="fa fa-calendar-o " aria-hidden="true"></i> ' + newsFeed.date + '</small>';
+    // eraseContentPost += '<small><i class="fa fa-window-close text-right" aria-hidden="true"></i></small>';
     eraseContentPost += '</div>';
     eraseContentPost += '<br>';
-    eraseContentPost += '<div class="row">';
-    eraseContentPost += '<div class="col-12 ">';
-    eraseContentPost += newsFeed.text;
     eraseContentPost += '</div>';
+    eraseContentPost += '<div class="col-md-12 p-2 rounded bg-whitesmoke ">';
+    eraseContentPost += newsFeed.text;
     eraseContentPost += '</div>';
     eraseContentPost += '</div>';
     eraseContentPost += '<br>';
@@ -122,9 +121,17 @@ window.addEventListener('load', function() {
     return eraseContentPost;
   }
 
+  Storage.prototype.setObj = function(newsFeeds, newsFeed) {
+    return this.setItem(key, JSON.stringify(newsFeed));
+  };
+
+  Storage.prototype.getObj = function(newsFeeds) {
+    return JSON.parse(this.getItem(newsFeeds));
+  };
 
   // Fijamos un evento(callback) que asocie el evento "onclick" del btn-save con la function createContent
   document.getElementById('btn-save').onclick = createContent;
+  document.getElementById('uploadBannerImage').onchange = getImageDataURL;
   showNewsFeed();
 });
 

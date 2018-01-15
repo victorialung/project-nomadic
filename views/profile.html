@@ -1,6 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,78 +11,108 @@
   <title>nomadic</title>
   <link rel="shortcut icon" href="../assets/img/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../vendors/foundation/css/foundation.css">
-  <link rel="stylesheet" href="../vendors/foundation/css/app.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="">
-  <!-- start profile section -->
-  <div class="bg-gradient title-bar">
-    <div class="title-bar-left">
-      <a href="newfeed.html">
-        <i class="fa fa-globe fa-2x ft-whitesmoke" aria-hidden="true"></i>
-      </a>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-gradient ">
+    <a class="navbar-brand" href="profile.html">
+      <img src="../assets/img/profile-user.jpg" class="rounded-circle" width="60" height="60" alt="logo-2">
+    </a>
+    <span class="ft-whitesmoke text-center" id="username">
+      <strong>Micaela B.</strong>
+    </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon ft-whitesmoke"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item ">
+          <a class="nav-link " href="newfeed.html">Newsfeed
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="">Log out</a>
+        </li>
+      </ul>
     </div>
-    <div class="title-bar-center">
-      <a href="profile.html">
-        <img src="../assets/img/nomadic-logo-2.png" width="60" height="60" alt="logo">
-      </a>
-    </div>
-    <div class="title-bar-right">
-      <span class="title-bar-text">
-        <a href="logout.html" class="ft-whitesmoke">Log Out</a>
-      </span>
-    </div>
-  </div>
-  <div class="card-profile-stats">
-    <div class="card-profile-stats-intro">
-      <img class="card-profile-stats-intro-pic" src="../assets/img/profile-user.jpg" alt="profile-image" />
-      <div class="card-profile-stats-intro-content">
-        <h3>Micaela Bastidas</h3>
-        <p>Joined Jan. 10th 2017</small>
-        </p>
-      </div>
-    </div>
-    <hr />
-    <div class="card-profile-stats-container">
-      <div class="card-profile-stats-statistic  ">
-        <span class="stat ft-grey">1</span>
-        <p>posts</p>
-      </div>
-      <div class="card-profile-stats-statistic">
-        <span class="stat ft-grey">1</span>
-        <p>friends</p>
-      </div>
-      <!-- /.card-profile-stats-statistic -->
-      <div class="card-profile-stats-statistic">
-        <span class="stat ft-grey">2</span>
-        <p>likes</p>
-      </div>
-    </div>
-    <div class="card-profile-stats-more">
-      <p class="card-profile-stats-more-link">
-        <a href="#">
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
+  </nav>
+  <br>
+  <div class="container">
+    <!--Card-->
+    <div class="card card-cascade wider reverse my-4">
+
+      <!--Card image-->
+      <div class="view overlay hm-white-slight">
+        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" class="img-fluid">
+        <a href="#!">
+          <div class="mask"></div>
         </a>
-      </p>
-      <div class="card-profile-stats-more-content">
-        <h2>Description</h2>
-        <p>Hi everybody. I'm Micaela! I like to travel around world and do extreme sports</p>
       </div>
-      <!-- /.card-profile-stats-more-content -->
+      <!--/Card image-->
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title">
+          <strong>My adventure</strong>
+        </h4>
+        <h5 class="indigo-text">
+          <strong>Photography</strong>
+        </h5>
+
+        <p class="card-text">“Viajar sirve para ajustar la imaginación a la realidad, y para ver las cosas como son en vez de pensar cómo serán”.
+        </p>
+
+      </div>
+      <!--/.Card content-->
+
     </div>
-    <!-- /.card-profile-stats-more -->
+    <!--/.Card-->
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="" id="header-new-posts ft-grey" class="header-new-post">
+          <h6 class="ft-grey">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Hey! Post about your latest experience!</h6>
+        </div>
+        <div class="form-group text-center">
+          <textarea name="" id="header-form-control" class="form-control" rows="4"></textarea>
+          <input class="p-2" type='file' id="uploadBannerImage" onchange="readURL(this);" />
+          <button type="button" id="btn-save" class="btn btn-success form-control pb-2">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            Save your Post!</button>
+        </div>
+        <div class="header-modal-error" id="header-modal-error"></div>
+      </div>
+      <br>
+      <div class=" col-md-8 col-sm-12">
+        <div class="posts header-old-posts ft-grey" id="header-old">
+          <h4h6>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i> Your Posts!</h6>
+        </div>
+        <br>
+        <div class=" rounded" id="old-posts">
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- /.card-profile-stats -->
+
   <!-- End profile section -->
-  <script src="../vendors/js/jquery-3.2.1.min.js "></script>
-  <script src="../vendors/foundation/js/vendor/jquery.js "></script>
-  <script src="../vendors/foundation/js/vendor/what-input.js "></script>
-  <script src="../vendors/foundation/js/vendor/foundation.js "></script>
-  <script src="../vendors/foundation/js/app.js "></script>
-  <script src="../js/profile.js "></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+    crossorigin="anonymous"></script>
+  <script src="../js/profile.js"></script>
 </body>
 
 </html>

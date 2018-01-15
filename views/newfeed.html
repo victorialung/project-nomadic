@@ -16,56 +16,56 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-gradient ">
-    <a class="navbar-brand" href="#">
-      <img src="../assets/img/nomadic-logo-2.png" width="60" height="60" alt="logo-2">
+    <a class="navbar-brand" href="profile.html">
+      <img src="../assets/img/profile-user.jpg" class="rounded-circle" width="60" height="60" alt="logo-2">
     </a>
+    <span class="ft-whitesmoke text-center" id="username">
+      <strong> NewsFeed</strong>
+    </span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon ft-whitesmoke"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto ft-whitesmoke">
+      <ul class="navbar-nav mr-auto ">
         <li class="nav-item active">
-          <a class="nav-link ft-whitesmoke" href="#">Home
+          <a class="nav-link " href="profile.html">Profile
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ft-whitesmoke" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled ft-whitesmoke" href="#">Disabled</a>
+          <a class="nav-link disabled" href="#">Log out</a>
         </li>
       </ul>
     </div>
   </nav>
-  </div>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <div class="" id="header-new-posts" class="header-new-post">
-          <h3>
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Hey! Post about your latest experience!</h3>
+        <div class="" id="header-new-posts ft-grey" class="header-new-post">
+          <h4 class="ft-grey">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Hey! Post about your latest experience!</h4>
         </div>
         <div class="form-group text-center">
           <textarea name="" id="header-form-control" class="form-control" rows="4"></textarea>
+          <!-- <input class="p-2" type='file' id="uploadBannerImage" onchange="readURL(this);" /> -->
           <br>
-          <button type="button" id="btn-save" class="btn btn-success form-control">
+          <button type="button" id="btn-save" class="btn btn-success form-control pb-2">
             <i class="fa fa-paper-plane" aria-hidden="true"></i>
             Save your Post! </button>
         </div>
-        <div class="header-modal-error" id="header-modal-error">
-
-        </div>
+        <div class="header-modal-error" id="header-modal-error"></div>
       </div>
       <br>
-      <div class=" col-md-12 col-sm-12">
-        <div class="posts header-old-posts" id="header-old">
-          <h3>
-            <i class="fa fa-file-text-o" aria-hidden="true"></i> Your Posts!</h3>
+      <div class=" col-md-8 col-sm-12">
+        <div class="posts header-old-posts ft-grey" id="header-old">
+          <h4>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i> Your Posts!</h4>
         </div>
         <br>
-        <div id="old-posts">
+        <div class=" rounded" id="old-posts">
+
         </div>
       </div>
 

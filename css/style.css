@@ -16,6 +16,10 @@ body {
   background-color: #dfdfdf;
 }
 
+.bg-whitesmoke {
+  background-color: whitesmoke;
+}
+
 .bg-image {
   background-image: url(../assets/img/primary.jpg);
   background-repeat: no-repeat;
@@ -23,7 +27,7 @@ body {
 }
 
 .ft-grey {
-  color: #857069;
+  color: #393939;
 }
 
 .ft-whitesmoke {
@@ -142,4 +146,12 @@ p:last-child {
 
 .card-profile-stats-more-content {
   display: none;
+}
+
+.feedback {
+  margin-right: 2.5rem;
+}
+
+.feedback-icon {
+  margin-right: 2rem;
 }
