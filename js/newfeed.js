@@ -131,7 +131,6 @@ window.addEventListener('load', function() {
 
   // Fijamos un evento(callback) que asocie el evento "onclick" del btn-save con la function createContent
   document.getElementById('btn-save').onclick = createContent;
-  document.getElementById('uploadBannerImage').onchange = getImageDataURL;
   showNewsFeed();
 });
 

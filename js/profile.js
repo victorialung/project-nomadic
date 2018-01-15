@@ -93,7 +93,8 @@ window.addEventListener('load', function() {
       newContentHtml = 'You have not shared any adventure yet';
       document.getElementById('old-posts').innerHTML = newContentHtml;
     } else {
-      console.log(dataNewsFeed);
+      console.log(newsfeed);
+      console.log(newsFeed.text);
       var saveNewsFeed = JSON.parse(dataNewsFeed);
       for (var i = 0; i < saveNewsFeed.length; i++) {
         // Añadir post al HTML
@@ -109,7 +110,6 @@ window.addEventListener('load', function() {
     eraseContentPost += '<div class="row p-2 ">';
     eraseContentPost += '<div class="col-sm-8 col-md-8 text-left ">';
     eraseContentPost += '<span class="ft-grey text-center feedback" id="username"> Micaela Bastidas</span>' + ' ' + ' ' + '<small class="feedback-icon"><i class="fa fa-calendar-o " aria-hidden="true"></i> ' + newsFeed.date + '</small>';
-    // eraseContentPost += '<small><i class="fa fa-window-close text-right" aria-hidden="true"></i></small>';
     eraseContentPost += '</div>';
     eraseContentPost += '<br>';
     eraseContentPost += '</div>';
@@ -121,7 +121,6 @@ window.addEventListener('load', function() {
 
     return eraseContentPost;
   }
-
 
   // Fijamos un evento(callback) que asocie el evento "onclick" del btn-save con la function createContent
   document.getElementById('btn-save').onclick = createContent;
