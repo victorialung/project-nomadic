@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+    <!--letter type-->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>nomadic-prueba</title>
+  </head>
+  <body class="grad10">
+    <div class="slide-buttons container-flex-row">
+      <a href="register.html" type="button" class="btn btn-success">
+        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+      </a>
+    </div>
+    <form class="container-flex-column text-center">
+      <h1 class="title text-center">SIGN UP</h1>
+      <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <span id="mensaje"></span>
+      </div>
+      <div class="checkbox text-center">
+        <label>
+          <input type="checkbox"> Check me out
+        </label>
+      </div>
+      <br>
+      <br>
+      <button type="submit" id="signup" class="btn btn-success" disabled>Sign Up</button>
+    </form>
+    <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../js/signup.js"></script>
+  </body>
+</html>
