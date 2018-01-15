@@ -1,67 +1,169 @@
-// Función para poder subir imagen-dinamico
-// $('preview').hover(function () {
-//   $(this).find('a').fadeIn();
-// }, function () {
-//   $(this).find('a').fadeOut();
-// }
+window.addEventListener('load', function() {
+  // Función para validar el contenido del post
+  function validatePost(text) {
+    if (text === null || text === '' || text.length < 1) {
+      return false;
+      // insertar aqui modal que le diga el usuario que tiene que ingresar contenido y no enviar comentarios vacios
+    } else {
+      return true;
+    }
+  }
 
-// );
+  // Función de aviso de error de postear contenido vacio
+  function showError() {
+    var contentHtml = '';
+    contentHtml += '<div class="alert alert-danger" role="alert">';
+    contentHtml += 'You can not send a empty message!';
+    contentHtml += '</div>';
 
-// $('#file-select').on('click', function (e) {
-//   e.preventDefault();
+    document.getElementById('header-modal-error').innerHTML = contentHtml;
+  }
 
-//   $('#file').click();
-// });
+  // Función para limpiar el aviso del error
+  function cleanError() {
+    document.getElementById('header-modal-error').innerHTML = '';
+  }
 
-// $('input[type=file]').change(function () {
-//   var file = (this.files[0].name).toString();
-//   var reader = new FileReader();
-//   $('#file-info').text('');
-//   $('file-info').text(file);
+  // Función para publicar contenido
+  function createContent() {
+    var contentTextarea = document.getElementById('header-form-control').value;
+    if (!validatePost(contentTextarea)) {
+      showError();
+      return;
+    }
+    document.getElementById('header-form-control').value = '';
+    cleanError();
 
-//   reader.onload = funtion(e){
-//     $('#preview img').attr('src', e.target.result);
-//   };
+    // agregando fecha al post
+    var dateReference = new Date();
+    var idDateReference = dateReference.getTime();
+    // Este método nos ayuda a insertar la fecha dentro del formato de tiempo que tiene el lugar donde reside el usuario
+    var date = dateReference.toLocaleDateString();
+    var text = contentTextarea;
 
-//   reader.readerDataURL(this.files[0]);
-// });
+    // creando un JSON = JavaScript Object Notation - lo usamos para guardarlo en el localStorage
+
+    var newsFeed = { 'id': idDateReference,
+'date': date,
+'texto': text };
+    validateNewsFeed(newsFeed);
+  }
+
+  function validPost(dataNewsFeed) {
+    if (dataNewsFeed == null || dataNewsFeed == '' || typeof dataNewsFeed === 'undefined' || dataNewsFeed == 'undefined') {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  // función para localStorage
+
+  function validateNewsFeed(newsFeed) {
+    var dataNewsFeed = localStorage.getItem('newsFeeds');
+    if (!validPost(dataNewsFeed)) {
+      var newsFeeds = [];
+      newsFeeds.push(newsFeed);
+      // guardar el nuevo contenido
+      saveNewsFeedPost(newsFeeds);
+      // guardando post de usuario antiguo
+    } else {
+      var saveNewsFeed = JSON.parse(dataNewsFeed);
+      saveNewsFeed.push(newsFeed);
+      saveNewsFeedPost(saveNewsFeed);
+    }
+    // mostrando los posts
+    showNewsFeed();
+  }
+
+  // función para guardar posts en JSON
+  function saveNewsFeedPost(newsFeeds) {
+    var newsFeedJSON = JSON.stringify(newsFeeds);
+    localStorage.setItem('newsFeeds', newsFeedJSON);
+    // localStorage.setItem("usuario", newUser);
+  }
+
+  function showNewsFeed() {
+    var newContentHtml = '';
+    var dataNewsFeed = localStorage.getItem('newsFeeds');
+    if (!validPost(dataNewsFeed)) {
+      newContentHtml = 'You have not shared any adventure yet';
+      document.getElementById('old-posts').innerHTML = newContentHtml;
+    } else {
+      console.log(dataNewsFeed);
+      var saveNewsFeed = JSON.parse(dataNewsFeed);
+      for (var i = 0; i < saveNewsFeed.length; i++) {
+        // Añadir post al HTML
+        newContentHtml += erasePost(saveNewsFeed[i]);
+      }
+      document.getElementById('old-posts').innerHTML = newContentHtml;
+    }
+  }
+
+  function erasePost(newsFeed) {
+    var eraseContentPost = '';
+    eraseContentPost += '<div class="newsfeedPost" id=" ' + newsFeed.idDateReference + '">';
+    eraseContentPost += '<div class="row">';
+    eraseContentPost += '<div class="col-md-6 text-left">';
+    eraseContentPost += '<small><i class="fa fa-calendar-o"aria-hidden="true"></i> ' + newsFeed.date + '</small>';
+    eraseContentPost += '</div>';
+    eraseContentPost += '<div class="col-md-6 text-right">';
+    eraseContentPost += '<small><i class="fa fa-window-close"aria-hidden="true"></i></small>';
+    eraseContentPost += '</div>';
+    eraseContentPost += '<br>';
+    eraseContentPost += '<div class="row">';
+    eraseContentPost += '<div class="col-12 ">';
+    eraseContentPost += newsFeed.text;
+    eraseContentPost += '</div>';
+    eraseContentPost += '</div>';
+    eraseContentPost += '</div>';
+    eraseContentPost += '<br>';
+
+    return eraseContentPost;
+  }
 
 
-window.addEventListener('load', function(event) {
-  var post = document.getElementById('post');
-  var btnSave = document.getElementById('btnSave');
-
-
-  post.addEventListener('input', function(event) {
-    console.log(event.target.value); // -- obtengo el valor textual de mi target
-  });
-
-  btnSave.addEventListener('click', function(event) {
-    event.preventDefault();
-    var postValue = post.value;
-    // console.log(nameValue);
-    var containerPost = document.getElementById('container-post');
-    var containerLi = document.createElement('li');
-    var brLine = document.createTextNode('  ');
-    var newText = document.createTextNode(postValue);
-    containerLi.appendChild(newText);
-    containerLi.appendChild(brLine);
-    containerPost.appendChild(containerLi);
-    // console.log(name.value);
-    post.value = '';
-  });
-
-  // -------------  añadiendo imgs --------------
-  $('#photo').on('change', function(ev) {
-    var photo = ev.target.files[0];
-    var fr = new FileReader();
-
-    fr.onload = function(ev2) {
-      console.dir(ev2);
-      $('#i').attr('src', ev2.target.result);
-    };
-
-    fr.readAsDataURL(photo);
-  });
+  // Fijamos un evento(callback) que asocie el evento "onclick" del btn-save con la function createContent
+  document.getElementById('btn-save').onclick = createContent;
+  showNewsFeed();
 });
+
+
+// window.addEventListener('load', function(event) {
+//   var post = document.getElementById('post');
+//   var btnSave = document.getElementById('btnSave');
+
+
+//   post.addEventListener('input', function(event) {
+//     console.log(event.target.value); // -- obtengo el valor textual de mi target
+//   });
+
+//   btnSave.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     var postValue = post.value;
+//     // console.log(nameValue);
+//     var containerPost = document.getElementById('container-post');
+//     var containerLi = document.createElement('li');
+//     var brLine = document.createTextNode('  ');
+//     var newText = document.createTextNode(postValue);
+//     containerLi.appendChild(newText);
+//     containerLi.appendChild(brLine);
+//     containerPost.appendChild(containerLi);
+//     // console.log(name.value);
+//     post.value = '';
+//   });
+
+//   // -------------  añadiendo imgs --------------
+//   $('#photo').on('change', function(ev) {
+//     var photo = ev.target.files[0];
+//     var fr = new FileReader();
+
+//     fr.onload = function(ev2) {
+//       console.dir(ev2);
+//       $('#i').attr('src', ev2.target.result);
+//     };
+
+//     fr.readAsDataURL(photo);
+//   });
+// });
 

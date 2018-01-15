@@ -8,60 +8,79 @@
   <title>nomadic</title>
   <link rel="shortcut icon" href="../assets/img/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../vendors/foundation/css/foundation.css">
-  <link rel="stylesheet" href="../vendors/foundation/css/app.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="">
-  <!-- start newsfeed section -->
-  <div class="row">
-    <div class="bg-gradient title-bar">
-      <div class="title-bar-left">
-        <a href="profile.html">
-          <i class="fa fa-user-circle-o fa-2x ft-whitesmoke" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="title-bar-center">
-        <a href="profile.html">
-          <img src="../assets/img/nomadic-logo-2.png" width="60" height="60" alt="logo">
-        </a>
-      </div>
-      <div class="title-bar-right">
-        <span class="title-bar-text">
-          <a href="logout.html" class="ft-whitesmoke">Log Out</a>
-        </span>
-      </div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-gradient ">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/img/nomadic-logo-2.png" width="60" height="60" alt="logo-2">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ft-whitesmoke">
+        <li class="nav-item active">
+          <a class="nav-link ft-whitesmoke" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ft-whitesmoke" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled ft-whitesmoke" href="#">Disabled</a>
+        </li>
+      </ul>
     </div>
-    <div class="small-12 columns">
-      <div class="uploader padding-4  ft-grey tab-content text-center">
-        <div class="card thumbnail padding-4">
-          <div class="body ">
-            <div class="text">
-              <textarea id="post" name="post" placeholder="What's on your mind?"></textarea>
-              <button class="button round" id="btnSave">Post</button>
-              <input id="photo" type="file" />
-            </div>
-          </div>
-          <div>
-            <hr>
-            <ul class="container-post no-bullet ft-grey" id="container-post">
-              <!-- agregando imgs-->
-              <img id="i" />
-            </ul>
-          </div>
+  </nav>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="" id="header-new-posts" class="header-new-post">
+          <h3>
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Hey! Post about your latest experience!</h3>
         </div>
+        <div class="form-group text-center">
+          <textarea name="" id="header-form-control" class="form-control" rows="4"></textarea>
+          <br>
+          <button type="button" id="btn-save" class="btn btn-success form-control">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            Save your Post! </button>
+        </div>
+        <div class="header-modal-error" id="header-modal-error">
 
+        </div>
       </div>
+      <br>
+      <div class=" col-md-12 col-sm-12">
+        <div class="posts header-old-posts" id="header-old">
+          <h3>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i> Your Posts!</h3>
+        </div>
+        <br>
+        <div id="old-posts">
+        </div>
+      </div>
+
     </div>
-    <!-- End newsfeed section -->
-    <script src="../vendors/js/jquery-3.2.1.min.js "></script>
-    <script src="../vendors/foundation/js/vendor/jquery.js "></script>
-    <script src="../vendors/foundation/js/vendor/what-input.js "></script>
-    <script src="../vendors/foundation/js/vendor/foundation.js "></script>
-    <script src="../vendors/foundation/js/app.js "></script>
-    <script src="../js/newfeed.js "></script>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+    crossorigin="anonymous"></script>
+  <script src="../js/newfeed.js"></script>
 </body>
 
 </html>
