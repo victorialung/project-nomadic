@@ -37,7 +37,7 @@ $(document).ready(function() {
     event.preventDefault();
     if ($email.val() === localStorage.email && $password.val() === localStorage.password) {
       alert('Bienvenido a la comunidad Nomadic');
-      window.location.href = '../viewss/newfeed.html';
+      window.location.href = '../views/newfeed.html';
     } else {
       alert('you need register');
       window.location.href = '../views/signup.html';
