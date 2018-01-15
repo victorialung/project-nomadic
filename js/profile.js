@@ -53,7 +53,7 @@ window.addEventListener('load', function() {
   }
 
   function validPost(dataNewsFeed) {
-    if (dataNewsFeed == null || dataNewsFeed == '' || typeof dataNewsFeed === 'undefined' || dataNewsFeed == 'undefined') {
+    if (dataNewsFeed == null || dataNewsFeed == '') {
       return false;
     } else {
       return true;
